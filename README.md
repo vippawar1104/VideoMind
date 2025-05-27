@@ -1,4 +1,4 @@
-# 🎥 YouTube AI Analyzer
+# 🎥 VideoMind-Youtube AI Analyzer
 
 <div align="center">
 
