@@ -59,6 +59,8 @@ streamlit run app/main.py
 
 3. Enter a YouTube video URL and click "Analyze"
 
+4. View the analysis results and download reports as needed
+
 ## 🏗️ Project Structure
 
 ```
@@ -112,3 +114,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
 Made with ❤️ by [Your Name]
 </div>
+
+## Screenshots
+
+### 1. Home Page
+![Home Page](screenshots/home.png)
+
+### 2. Video Analysis
+![Video Analysis](screenshots/analysis.png)
+
+### 3. Summary View
+![Summary View](screenshots/summary.png)
+
+### 4. Key Points
+![Key Points](screenshots/keypoints.png)
+
+### 5. Questions and Resources
+![Questions and Resources](screenshots/questions_resources.png)
