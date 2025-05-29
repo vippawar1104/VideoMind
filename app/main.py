@@ -8,6 +8,7 @@ import re
 from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
 from youtube_transcript_api.formatters import TextFormatter
 import time
+import json
 
 # Try importing plotly, but don't fail if it's not available
 try:
@@ -181,6 +182,30 @@ with col2:
     st.markdown("### ")
     analyze_button = st.button("🎥 Analyze Video", use_container_width=True)
 
+# Add these helper functions after the imports and before the page config
+def create_download_button(data, filename, button_text):
+    """Create a download button for the given data."""
+    if isinstance(data, list):
+        data = "\n".join([f"{i+1}. {item}" for i, item in enumerate(data)])
+    elif isinstance(data, dict):
+        data = json.dumps(data, indent=2)
+    
+    st.download_button(
+        label=button_text,
+        data=data,
+        file_name=filename,
+        mime="text/plain"
+    )
+
+def get_video_id(url):
+    """Extract video ID from YouTube URL."""
+    video_id = None
+    if "youtube.com" in url:
+        video_id = url.split("v=")[1].split("&")[0]
+    elif "youtu.be" in url:
+        video_id = url.split("/")[-1].split("?")[0]
+    return video_id
+
 if analyze_button and video_url:
     try:
         with st.spinner("Fetching video transcript..."):
@@ -198,6 +223,13 @@ if analyze_button and video_url:
                     if summary_result.get("success"):
                         st.markdown("### Video Summary")
                         st.markdown(summary_result.get("summary"))
+                        # Add download button for summary
+                        video_id = get_video_id(video_url)
+                        create_download_button(
+                            summary_result.get("summary"),
+                            f"summary_{video_id}.txt",
+                            "📥 Download Summary"
+                        )
                     else:
                         st.error(summary_result.get("error"))
             
@@ -207,6 +239,13 @@ if analyze_button and video_url:
                     if key_points_result.get("success"):
                         st.markdown("### Key Points")
                         st.markdown(key_points_result.get("key_points"))
+                        # Add download button for key points
+                        video_id = get_video_id(video_url)
+                        create_download_button(
+                            key_points_result.get("key_points"),
+                            f"key_points_{video_id}.txt",
+                            "📥 Download Key Points"
+                        )
                     else:
                         st.error(key_points_result.get("error"))
             
@@ -217,6 +256,13 @@ if analyze_button and video_url:
                         st.markdown("### Follow-up Questions")
                         for i, question in enumerate(questions_result.get("questions"), 1):
                             st.markdown(f"{i}. {question}")
+                        # Add download button for questions
+                        video_id = get_video_id(video_url)
+                        create_download_button(
+                            questions_result.get("questions"),
+                            f"questions_{video_id}.txt",
+                            "📥 Download Questions"
+                        )
                     else:
                         st.error(questions_result.get("error"))
             
@@ -227,6 +273,13 @@ if analyze_button and video_url:
                         st.markdown("### Learning Resources")
                         for i, resource in enumerate(resources_result.get("resources"), 1):
                             st.markdown(f"{i}. {resource}")
+                        # Add download button for resources
+                        video_id = get_video_id(video_url)
+                        create_download_button(
+                            resources_result.get("resources"),
+                            f"resources_{video_id}.txt",
+                            "📥 Download Resources"
+                        )
                     else:
                         st.error(resources_result.get("error"))
         else:
