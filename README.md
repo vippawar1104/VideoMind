@@ -112,7 +112,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-Made with ❤️ by [Your Name]
+Made with ❤️ by [Vipul Pawar]
 </div>
 
 ## Screenshots
@@ -120,8 +120,8 @@ Made with ❤️ by [Your Name]
 ### 1. Home Page
 ![Home Page](screenshots/home.png)
 
-### 2. Video Analysis
-![Video Analysis](screenshots/analysis.png)
+### 2. Resources
+![Resources](screenshots/resources.png)
 
 ### 3. Summary View
 ![Summary View](screenshots/summary.png)
@@ -129,5 +129,5 @@ Made with ❤️ by [Your Name]
 ### 4. Key Points
 ![Key Points](screenshots/keypoints.png)
 
-### 5. Questions and Resources
-![Questions and Resources](screenshots/questions_resources.png)
+### 5. Questions
+![Questions](screenshots/questions.png)
