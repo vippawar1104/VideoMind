@@ -22,6 +22,29 @@ YouTube AI Analyzer is a powerful tool that leverages artificial intelligence to
 - 📚 **Resource Suggestions**: Get additional learning resources
 - 🎯 **Interactive UI**: User-friendly interface built with Streamlit
 
+## 🎬 Additional Demo Video
+
+[![Watch the Demo](https://img.shields.io/badge/▶️-Click_to_Watch_Second_Demo-blue?style=for-the-badge)](https://drive.google.com/file/d/190lQvWGj1FjNAq0yOR6OjsH8LOcWNxev/view)
+
+> Click the button above to view the second demo hosted on Google Drive.
+
+## Screenshots
+
+### 1. Home Page
+![Home Page](screenshots/home.png)
+
+### 2. Resources
+![Resources](screenshots/resources.png)
+
+### 3. Summary View
+![Summary View](screenshots/summary.png)
+
+### 4. Key Points
+![Key Points](screenshots/keypoints.png)
+
+### 5. Questions
+![Questions](screenshots/questions.png)
+
 ## 🛠️ Installation
 
 1. Clone the repository:
@@ -115,19 +138,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Made with ❤️ by [Vipul Pawar]
 </div>
 
-## Screenshots
 
-### 1. Home Page
-![Home Page](screenshots/home.png)
-
-### 2. Resources
-![Resources](screenshots/resources.png)
-
-### 3. Summary View
-![Summary View](screenshots/summary.png)
-
-### 4. Key Points
-![Key Points](screenshots/keypoints.png)
-
-### 5. Questions
-![Questions](screenshots/questions.png)
