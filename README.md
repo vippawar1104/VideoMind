@@ -24,7 +24,7 @@ YouTube AI Analyzer is a powerful tool that leverages artificial intelligence to
 
 ## 🎬 Additional Demo Video
 
-[![Watch the Demo](https://img.shields.io/badge/▶️-Click_to_Watch_Second_Demo-blue?style=for-the-badge)](https://drive.google.com/file/d/190lQvWGj1FjNAq0yOR6OjsH8LOcWNxev/view)
+[![Watch the Demo](https://img.shields.io/badge/▶️-Click_to_Watch_the_Demo-blue?style=for-the-badge)](https://drive.google.com/file/d/190lQvWGj1FjNAq0yOR6OjsH8LOcWNxev/view)
 
 > Click the button above to view the second demo hosted on Google Drive.
 
